@@ -1,0 +1,69 @@
+{% assign title = page.title %}
+
+{% if page.teaser %}
+  {% assign teaser = page.teaser %}
+{% else %}
+  {% assign teaser = page.excerpt %}
+{% endif %}
+
+{% if page.title == 'Posts' %}
+  {% assign page_type = 'home' %}
+  {% assign title = site.title %}
+  {% assign teaser = site.description %}
+{% elsif page.layout == 'listing' %}
+  {% assign page_type = 'listing' %}
+  {% assign title = title | append: ' | ' | append: site.title %}
+{% else %}
+  {% assign page_type = 'destination' %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
+    <meta name="author"       content="{{ site.author }}" />
+    <meta name="description"  content="{{ teaser }}" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" />
+    {% feed_meta %}
+    <link rel="stylesheet"    href="{{ site.baseurl }}/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet'/>
+  </head>
+  <body>
+    <div class="backdrop backdrop--{{ page_type }}">
+      <header class="header header--{{ page_type }}">
+
+        <nav class="nav">
+          <ul class="nav__list nav--{{ page_type }}__list collapsed">
+            {% for item in site.nav_menu %}
+              {% if item.scheme == 'mailto' %}
+                {% assign plain_link = 'mailto:' | append: item.handle | append: '@' | append: item.domain %}
+                {% assign obfuscated_link = plain_link | url_encode | split: '' | reverse | join: '' %}
+                <a class="nav__item nav__item--{{ item.name | downcase }} email" href="{{ obfuscated_link }}">{{ item.name }}</a>
+              {% else %}
+                {% if item.outbound %}
+                  {% assign url = item.url | append: '" target=_blank' %}
+                {% else %}
+                  {% assign url = item.url | prepend: site.baseurl %}
+                {% endif %}
+                <a class="nav__item nav__item--{{ item.name | downcase }}" href="{{ url }}">{{ item.name }}</a>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </header>
+      <hr>
+
+      {{ content }}
+
+      <hr>
+      <footer class="colophon colophon--{{ page_type }}">
+
+      </footer>
+    </div>
+
+    <script src="{{ site.baseurl }}/site.js"></script>
+  </body>
+</html>

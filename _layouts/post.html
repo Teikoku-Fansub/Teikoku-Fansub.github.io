@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% capture pretty_date %}
+  {% assign day = page.date | date: "%-d"  %}
+  {{ page.date | date: "%B" }}
+  {% case day %}{% when '1' or '21' or '31' %}{{ day }}st{% when '2' or '22' %}{{ day }}nd{% when '3' or '23' %}{{ day }}rd{% else %}{{ day }}th{% endcase %}{{ page.date | date: ", %Y" }}
+{% endcapture %}
+
+<main class="post" role="main">
+
+    <ul class="post__list {{ page_type }}">
+            <li class="post__entry {{ page_type }}">
+              <div class="post__head">
+                <a href="{{ site.baseurl }}/category/{{ page.category }}" class="posts__category {{ page_type }}">{{ page.category }}</a>
+                <h1 class="post__entry-title {{ page_type }}">{{ page.title }}</h1>
+                <time class="posts__entry-date post-page" datetime="{{ page.date | date_to_xmlschema }}">
+                  {{ page.date | date: "%b %-d - %Y" }}</time>
+              </div>
+
+                <div class="post__content {{ page_type }}">{{ content }}</div><br>
+
+            <div class="post__labels">
+                {% if page.tags %}{% for tag in page.tags %} <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post__tag">{{ tag }}</a>{% endfor %}{% endif %}
+            </div>
+
+            </li>
+    </ul>
+  </main>
+</main>
+
+{% comment %}
+{% endcomment %}
+
+{% if page.reddit_post %}
+  <section class="comments">
+    {% if page.featured_comments %}
+      {% assign call_to_action = "Join the Discussion" %}
+
+      <h2>Featured Comments</h2>
+      {% for comment in page.featured_comments %}
+      <div class="reddit-embed" data-embed-media="www.redditmedia.com" data-embed-parent="{% if comment.context %}true{% else %}false{% endif %}" data-embed-live="{% if comment.freeze %}false{% else %}true{% endif %}"><a href="{{ comment.url }}"></a></div>
+      {% endfor %}
+
+      <script async src="https://www.redditstatic.com/comment-embed.js"></script>
+    {% else %}
+      {% assign call_to_action = "Comments" %}
+    {% endif %}
+    <a href="{{ page.reddit_post }}" target="_blank" class="comments__cta">{{ call_to_action }}</a>
+  </section>
+{% endif %}

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+{% if page.collection %}
+  {% assign page_type = 'listing' %}
+  {% assign item_type = 'posts' %}
+  {% assign filter = page.collection %}
+  {% if filter == 'tag' %}
+    {% assign filter = filter | append: 's' %}
+  {% endif %}
+  {% assign label = page.path | split: '/' | last | split: '.' | first %}
+
+  {% assign pool = site.posts | where: filter, label %}
+
+{% else %}
+  {% assign page_type = 'home' %}
+  {% assign item_type = 'posts' %}
+  {% assign pool = paginator.posts %}
+
+{% endif %}
+
+<main class="post {{ page_type }}" role="main">
+
+  <ul class="post__list {{ page_type }}">
+          {% for post in site.posts limit 2 %}
+          <li class="post__entry {{ page_type }}">
+
+            <time class="posts__entry-date {{ page_type }}" datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%b %-d" }}</time>
+
+              <div class="posts__category {{ page_type }}">{{ post.category }}</div>
+
+              <h1 class="post__entry-title {{ page_type }}">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+              </h1>
+
+              <div class="post__content {{ page_type }}">{{ post.content | truncatewords:40 }}</div><br>
+              <div class="post__jump"><a href="{{ post.url }}">LEIA MAIS</a></div>
+          </li>
+          {% endfor %}
+  </ul>
+</main>
+
+{{ content }}
