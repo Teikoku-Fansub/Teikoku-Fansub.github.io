@@ -124,21 +124,17 @@ ul.post__list.home {
 }
 
 .post__jump {
-    font-size: 35px;
-    text-align: center;
     margin-top: 20px;
 }
 
 .post__jump a {
-    color: white !important;
-    background: #973ef0;
-    padding: 3px 140px;
-    font-weight: bold;
-}
-
-.post__jump a:hover {
-    color: white !important;
-    background: #5900b3 !important;
+    background: #0000;
+    position: absolute;
+    width: 510px;
+    height: 350px;
+    margin-top: -350px;
+    padding: 1px;
+    display: flex;
 }
 
 .post__labels {
