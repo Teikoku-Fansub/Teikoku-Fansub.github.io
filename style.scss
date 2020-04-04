@@ -58,6 +58,11 @@
     margin: auto;
     position: relative;
     padding-top: 350px;
+    display: flex;
+}
+
+ul.post__list.home {
+    display: flex;
 }
 
 .post__entry {
@@ -66,13 +71,13 @@
     border-radius: 5px;
     padding: 1rem;
     list-style: none;
+    width: 49%;
+    margin-right: 15px;
 }
 
 .posts__entry-date {
     float: right;
     font-weight: 900;
-    position: absolute;
-    right: 3.5em;
 }
 
 .posts__entry-date.post-page {
