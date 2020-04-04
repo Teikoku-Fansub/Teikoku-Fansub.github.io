@@ -1,0 +1,91 @@
+html { font-size: 16px; } // define “root-em” (rem) size
+
+body {
+  background: url('');
+  position: relative;
+  min-height: 100vh;
+  overflow-wrap: break-word; // force wider-than-viewport words to break
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #973ef0
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+hr { display: none; }
+
+img {
+    max-width: 705px;
+}
+
+mark {
+  padding: 0 0.25rem;
+}
+
+li {
+  margin: 0.5rem 0;
+  line-height: 1.25;
+  p, pre, ol, ul, blockquote { margin: 0.75rem 0; }
+}
+
+code {
+  background-color: #1A1A1A;
+  padding: 0.0625em 0.25em;
+  font-size: 0.875em;
+  border-radius: 0.25rem;
+}
+
+pre { // code blocks
+  font-size: 0.875rem;
+
+  code { // override inline <code> rules
+    padding: 0;
+    font-size: inherit;
+    white-space: pre;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 0.9375rem;
+  border: 1px dotted #1A1A1A;
+
+  em, cite, i { font-style: normal; }
+
+  mark { background-color: #1A1A1A; color: #A1A1A1; }
+
+  code { background-color: #1A1A1A; }
+
+}
+
+.mini {
+  width: 100px;
+}
+
+.pequeno {
+  width: 250px;
+}
+
+.medio {
+  width: 500px;
+}
+
+.grande {
+  width: 705px;
+}
