@@ -1,0 +1,152 @@
+---
+---
+
+@import 'base';
+
+   body {
+       background: url("");
+       position: relative;
+       font-family: Roboto;
+       color: #1A1A1A;
+       font-weight: 300;
+       line-height: 1.5;
+       margin: 0;
+   }
+
+   .backdrop > * {
+       padding: 1.1rem;
+   }
+
+.header {
+    box-shadow: #333 0px 0px 3px;
+    top: 0px;
+    will-change: top;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    background: #181420;
+}
+
+.nav__list {
+    float: right;
+    margin: 6.3px;
+    padding: 0px;
+}
+
+.nav__item {
+    font-family: "Roboto Black";
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    text-transform: uppercase;
+    will-change: padding-bottom;
+    padding: 0.5rem 1rem 0.25rem;
+    transition: padding-bottom 100ms ease 0s;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    letter-spacing: 0.5px;
+}
+
+.nav__item:hover {
+    padding-bottom: 1.2rem;
+    border-bottom: 0.5rem solid rgb(151, 62, 240);
+}
+
+.post {
+    width: 800px;
+    margin: auto;
+    position: relative;
+    padding-top: 350px;
+}
+
+.post__entry {
+    border: 3px solid #eeeef5;
+    border-right-width: 1.3rem;
+    border-radius: 5px;
+    padding: 1rem;
+    list-style: none;
+}
+
+.posts__entry-date {
+    float: right;
+    font-weight: 900;
+    position: absolute;
+    right: 3.5em;
+}
+
+.posts__entry-date.post-page {
+    margin-top: -125px;
+}
+
+.posts__category {
+    color: #973ef0;
+    font-size: xx-large;
+    font-family: Roboto black;
+}
+
+.posts__category:after {
+    content: "]";
+}
+
+.posts__category:before {
+    content: "[";
+}
+
+.post__entry-title {
+    margin-top: 0px;
+    font-size: 45px;
+    font-family: Roboto Black;
+}
+
+.post__entry-title a {
+    color: #181420;
+}
+
+.post__entry-title a:hover {
+    color: #973ef0;
+}
+
+.post__content p {
+    font-family: Montserrat;
+    font-size: 20px;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+.post__content p:first-of-type {
+    margin-top: 25px;
+}
+
+.post__jump {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.post__jump a {
+    color: white !important;
+    background: #973ef0;
+    padding: 3px 140px;
+    font-weight: bold;
+}
+
+.post__jump a:hover {
+    color: white !important;
+    background: #5900b3 !important;
+}
+
+.post__labels {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+.post__labels a:before {
+    content: "[";
+}
+
+.post__labels a:after {
+    content: "]";
+}
