@@ -2,36 +2,27 @@
 # Theme Customization #
 #######################
 
-title: J. Bravo                             # used in <title> tag & site header
-author: Johnny Bravo                        # used in a <meta> tag & /feed.xml
+title: Teikoku Fansub                             # used in <title> tag & site header
+author: Carneirinho                        # used in a <meta> tag & /feed.xml
 description: >                              # used in a <meta> tag & /feed.xml
-  Hello 911 emergency, there's a handsome guy in my house!
-  Oh wait a second, cancel that. It's only me.
-slogan: Showtime!                           # used in site header, beside title
+  Um fansub de conteúdos, criado e gerido por uma unica pessoa, legendando e traduzindo o que quiser.
+slogan: Água Molhada                           # used in site header, beside title
 avatar: /i/avatar.png                       # used as portrait in site header
-banner: /i/mountains.svg                    # used as background in site header
-url: http://solana.ryanlue.com              # used by plugins to generate feed.xml and sitemap.xml
+url: https://teikoku-fansub.github.io/            # used by plugins to generate feed.xml and sitemap.xml
 baseurl: ''                                 # prepended to all absolute filepaths
-repo: https://github.com/rlue/jekyll-solana # used in footer
 
 # Objects listed here will appear in the main nav menu.
 # Exceeding four items may cause problems on the desktop (>900px wide) layout.
 nav_menu:
-  - name: Posts
-    url: /
-    icon: /i/icons.svg#posts # icons should be 24x24 px.
-  - name: Projects
+  - name: Projetos
     url: /projects
-    icon: /i/icons.svg#portfolio
-  - name: GitHub
-    url: https://github.com/rlue/
-    icon: /i/icons.svg#github
+  - name: Artigos
+    url: /artigos
     outbound: true      # this key sets a link to open in a new window.
-  - name: Contact
+  - name: Contato
     scheme: mailto      # these keys enable email obfuscation.
-    handle: hello       # you know, to protect you from bots. (handle and domain
-    domain: github.com  # are separated in case bots crawl GitHub repos, too.)
-    icon: /i/icons.svg#email
+    handle: teikokufsub      # you know, to protect you from bots. (handle and domain
+    domain: gmail.com  # are separated in case bots crawl GitHub repos, too.)
 
 # Objects listed here will appear on the /projects.html page.
 projects:
