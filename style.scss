@@ -65,13 +65,22 @@ ul.post__list.home {
     display: flex;
 }
 
-.post__entry {
+li.post__entry.home {
     border: 3px solid #eeeef5;
     border-right-width: 1.3rem;
     border-radius: 5px;
     padding: 1rem;
     list-style: none;
     width: 49%;
+    margin-right: 15px;
+}
+
+.post__entry {
+    border: 3px solid #eeeef5;
+    border-right-width: 1.3rem;
+    border-radius: 5px;
+    padding: 1rem;
+    list-style: none;
     margin-right: 15px;
 }
 
