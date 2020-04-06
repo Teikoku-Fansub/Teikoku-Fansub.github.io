@@ -59,6 +59,7 @@ permalink: /:collection/:path
 collections:
   category: { output: true }
   tag:      { output: true }
+  letra:    { output: true }
 
 defaults:
   - scope:  { type:   posts    }
