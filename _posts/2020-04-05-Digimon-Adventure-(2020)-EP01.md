@@ -1,7 +1,8 @@
 ---
 title: Digimon Adventure (2020) - 01
 category: ANIME
-tags: [digimon, adventure, 2020, D]
+tags: [digimon, anime]
+letra: D
 ---
 <center>
 <img class="grande" src="../i/digi-adv.png"/>
