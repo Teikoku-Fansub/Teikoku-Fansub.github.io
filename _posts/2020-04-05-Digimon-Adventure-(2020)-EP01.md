@@ -1,7 +1,7 @@
 ---
 title: Apartamento 609
 category: ANIME
-tags: [digimon, adventure, 2020]
+tags: [digimon, adventure, 2020, D]
 ---
 <center>
 <img class="medio" src="../i/609.png"/>
