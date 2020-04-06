@@ -1,5 +1,5 @@
 ---
-title: Apartamento 609
+title: Digimon Adventure (2020) - 01
 category: ANIME
 tags: [digimon, adventure, 2020, D]
 ---
